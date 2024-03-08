@@ -1,0 +1,47 @@
+
+.loaderDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.loader {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    border: 5px solid #dddddd;
+    border-top-color: red;
+    animation: rotate 1s infinite;
+}
+  
+@keyframes rotate {
+    100% {
+      rotate: 360deg;
+    }
+}
+
+.inptForm {
+    margin-top: 10px;
+}
+
+.likes {
+    display: flex;
+    gap: 10px;
+}
+.bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    margin-left: 10px;
+}
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.btn:nth-child(2) {
+    color: white;
+    background-color: green;
+    border: none;
+}

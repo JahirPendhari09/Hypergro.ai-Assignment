@@ -1,0 +1,226 @@
+.videoThumbnails {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    height: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.videoThumbnails>div {
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.videoThumbnails>div>img {
+    width: 60%;
+    height: 150px;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: b;
+}
+
+.showAllVideo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
+}
+
+.showAllVideo>div {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.showAllVideo>div>img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 15px;
+}
+
+.videoData {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: -100px;
+}
+
+.videoData>p {
+    font-size: 14px;
+}
+
+.videoData>a {
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+
+.container>div {
+    text-align: left;
+}
+
+.container>div>video {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border-radius: 10px;
+}
+
+.userData {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.userData > img {
+    border-radius: 50%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width:769px) {
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+    }
+    .video {
+      width: 100%;
+    }
+    .videoThumbnails {
+      width: 95%;
+      margin: auto;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .videoThumbnails div {
+      width: 95%;
+      gap:20px;
+      margin: auto;
+    }
+    .videoThumbnails div  img {
+      width: 150px;
+      height: 150px;
+    }
+    .showAllVideo {
+      grid-template-columns: repeat(2,1fr);
+      width: 90%;
+      margin: auto;
+      gap: 10px;
+    }
+    .showAllVideo > div{
+      width: 90%;
+      border-radius: 15px;
+    }
+   
+  }
+
+  
+  @media (min-width:1500px) {
+    .mainContainer{
+      width: 1000px;
+      margin: auto;
+    }
+    
+  }
+  @media (max-width: 469px) {
+    .showAllVideo {
+      grid-template-columns: repeat(1,1fr);
+    }
+   
+    .showAllVideo > div{
+      width: 320px;
+      margin: auto;
+    }
+    
+  }
+  @media (max-width: 600px) {
+    .videoThumbnails {
+      width: 95%;
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  
+  @media (min-width:1200px) and (max-width:1499px) {
+    .showAllVideo {
+      width: 100%;
+      grid-template-columns: repeat(3,1fr);
+      margin: auto;
+      margin-left: 0px;
+    }
+    .showAllVideo > div {
+      width: 100%;
+      margin: auto;
+    }
+    
+  }
+  @media (min-width:1001px) and (max-width:1199px) {
+    .showAllVideo {
+      width: 100%;
+      grid-template-columns: repeat(2,1fr);
+      margin: auto;
+      margin-left: 0px;
+    }
+    .showAllVideo > div {
+      width: 100%;
+      margin: auto;
+    }
+    
+  }
+  
+  @media  (min-width:769px) and (max-width:1000px) {
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+    }
+    .video {
+      width: 100%;
+    }
+    .videoThumbnails {
+      width: 95%;
+      margin: auto;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .showAllVideo {
+      width: 80%;
+      grid-template-columns: repeat(2,1fr);
+      margin-left: 0px;
+  
+    }
+    .showAllVideo > div {
+      width: 100%;
+      margin: auto;
+    }
+  }

@@ -1,0 +1,24 @@
+
+.commentBox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+span {
+    font-weight: bold;
+}
+.repliesSingleComment {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.repliesSingleComment > div {
+    margin-top: -10px;
+}
+.container {
+    padding-left: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
