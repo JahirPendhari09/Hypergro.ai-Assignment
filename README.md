@@ -4,6 +4,8 @@
 
 This repository contains the code for a Video Clone App designed using React with Typescript  for an assignment given by Hypergo.
 
+## Presentation Video https://drive.google.com/file/d/1JrwPfA7NoAIQkqidSJKDeQWQjED49SWg/view?usp=sharing
+
 ## Technologies Used
 
 ### 1. React
@@ -19,7 +21,20 @@ Axios is a promise-based HTTP client for making asynchronous requests in JavaScr
 
 The application is deployed on Netlify and can be accessed [here](https://hypergro-video-assignment.netlify.app/).
 
-# Profile Page 
+# Home Page 
+
+![Screenshot (223)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/d6a4d312-6df3-4932-a425-e7588bd2e6ad)
+
+# Home page with playing video
+
+![Screenshot (233)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/391be335-5636-43e9-ab44-7dc555c0ba08)
+
+
+# Comment Section and Likes and dislikes ( Nested Comment )
+
+![Screenshot (227)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/159c8a6d-7584-4886-afb4-2c9e2fb625a5)
+
+
 
 
 
