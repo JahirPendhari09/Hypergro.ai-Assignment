@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the code for a Video Clone App designed using React with Typescript  for an assignment given by Hypergo.
+This repository contains the code for a Video Clone App designed using React with Typescript  for an assignment given by Hypergro.
 
 ## Presentation Video https://drive.google.com/file/d/1JrwPfA7NoAIQkqidSJKDeQWQjED49SWg/view?usp=sharing
 
