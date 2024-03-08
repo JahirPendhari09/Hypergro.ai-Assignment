@@ -45,7 +45,7 @@ const SingleCommentBox: React.FC<Props> = ({ id, name, reply, comment,date, hand
           <button onClick={() => setIsAddReply(!isAddReply)}>Add Reply</button>
         </div>
 
-        <h5>{reply.length} Replies</h5>
+        <h5>{reply.length >0 && reply.length} Replies</h5>
         {isAddReply && <CommentForm handleAddReplyMain={handleAddComment}/>}
 
         <div  className={style.repliesSingleComment}>

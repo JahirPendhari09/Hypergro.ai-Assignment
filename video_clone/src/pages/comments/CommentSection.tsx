@@ -41,7 +41,7 @@ const CommentSection: React.FC = () => {
 
   return (
     <>
-      <h3>{comments.length} Comments</h3>  
+      <h3>{comments.length>0 && comments.length } Comments</h3>  
        <button onClick={() => setIsAddReply(!isAddReply)}>Add Comment</button>
         { isAddReply &&  <CommentForm handleAddReplyMain={handleAddReplyMain} /> }
         {
