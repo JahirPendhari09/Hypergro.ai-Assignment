@@ -7,12 +7,19 @@ This repository contains the code for a Video Clone App designed using React wit
 ## Presentation Video https://drive.google.com/file/d/1JrwPfA7NoAIQkqidSJKDeQWQjED49SWg/view?usp=sharing
 
 ## Technologies Used
+### 1. TypeScript 
+This project is developed using TypeScript, a superset of JavaScript that adds static typing to the language. TypeScript offers several benefits, including:
 
-### 1. React
+<li> Type Safety:- TypeScript provides compile-time type checking, helping catch errors and bugs early in the development process.</li>
+<li>Enhanced IDE Support:-IDEs and text editors with TypeScript support offer advanced features like code completion, refactoring tools, and type information tooltips.Improved Code Maintainability: With explicit type annotations, code becomes more self-documenting and easier to understand, reducing the likelihood of introducing errors during maintenance.</li>
+<li>Better Collaboration:-TypeScript's type system helps clarify interfaces and function signatures, facilitating collaboration among team members.</li>
+<li>Ecosystem Compatibility:- TypeScript seamlessly integrates with existing JavaScript libraries and frameworks, allowing gradual adoption in projects.</li>
+         
+### 2. React
 
 React is a JavaScript library for building Ssamless UI. Its component-based architecture makes it easy to manage and organize UI elements, promoting reusability and maintainability.React Provide SOC ( Seperation of Concerns ) so we can separate our app.
 
-### 2. Axios
+### 3. Axios
 
 Axios is a promise-based HTTP client for making asynchronous requests in JavaScript. It simplifies data fetching and handling HTTP responses, making it a reliable choice for API interactions in React applications.
 
