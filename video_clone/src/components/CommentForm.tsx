@@ -37,4 +37,5 @@ const Modal: React.FC<ModalProps>  = ({ isOpen, onClose, handleAddReplyMain }) =
   );
 };
 
+
 export default Modal;
