@@ -42,13 +42,13 @@ const Homepage: React.FC = () => {
   
   return (
     <div className={styles.App}>
-      <h1>Video Clone</h1>
       <div className={styles.mainContainer}>
         <VideoSection selectedVideo={selectedVideo} />
         <AllVideosDisplay handleChange={handleChange} videos={videos} selectedVideo={selectedVideo} />
       </div>
-      <div>
+      <div className={styles.btns}>
         <PaginationButton onClick={() => setPage(page - 1)} disabled={page === 0} label="Previous"/>
+        <span>{page}</span>
         <PaginationButton onClick={() => setPage(page + 1)} disabled={page === 9} label="Next" />
       </div>
     </div>

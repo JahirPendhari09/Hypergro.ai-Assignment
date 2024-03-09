@@ -13,3 +13,8 @@ export const initialReply: Reply = {
     reply: [],
     date:'',
 };
+
+export interface initialForm {
+    name:string,
+    comment:string
+}

@@ -4,10 +4,7 @@
     width: 95%;
     margin: auto;
 }
-h1 {
-    margin-bottom: 20px;
-    color: blue;
-}
+
 .mainContainer{
     width: 100%;
     display: flex;
@@ -15,6 +12,11 @@ h1 {
     gap: 10px;
 }
 
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Media Queries for Responsive Design */
 @media (max-width:769px) {

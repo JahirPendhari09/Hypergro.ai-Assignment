@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import CommentUI from './CommentUI';
 import  style from './comment.module.css';
 import LikeDislike from '../../components/LiksDislikes';
-import CommentForm, { CommentName } from '../../components/CommentForm';
+import Modal from '../../components/CommentForm';
+import { initialForm } from '../../common/rowMaterial';
 
 interface CommentData {
   id: number;
@@ -24,7 +25,11 @@ interface Props {
 const SingleCommentBox: React.FC<Props> = ({ id, name, reply, comment,date, handleAddCommentMain }) => {
   const [isAddReply, setIsAddReply] = useState<boolean>(false);
 
-  const handleAddComment = (obj:CommentName) => {
+  const handleCloseModal = () => {
+    setIsAddReply(false);
+  };
+
+  const handleAddComment = (obj:initialForm) => {
     const newComment: CommentData = {
       id: Math.random() * 100 ,
       name: obj.name,
@@ -41,12 +46,12 @@ const SingleCommentBox: React.FC<Props> = ({ id, name, reply, comment,date, hand
       <div className={style.container}>
         <div>
           <CommentUI {...obj} />
-          <LikeDislike/>
+          <LikeDislike totalL={name=="john"? 1:0} totalDis= {0}/>
           <button onClick={() => setIsAddReply(!isAddReply)}>Add Reply</button>
         </div>
 
         <h5>{reply.length >0 && reply.length} Replies</h5>
-        {isAddReply && <CommentForm handleAddReplyMain={handleAddComment}/>}
+        {isAddReply && <Modal isOpen={isAddReply} onClose ={handleCloseModal} handleAddReplyMain={handleAddComment}/>}
 
         <div  className={style.repliesSingleComment}>
           {reply?.length > 0 &&

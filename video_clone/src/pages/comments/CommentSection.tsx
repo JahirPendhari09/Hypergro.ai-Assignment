@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SingleCommentBox from './SingleCommentBox';
-import CommentForm, { CommentName } from '../../components/CommentForm';
+import Modal from '../../components/CommentForm';
+import { initialForm } from '../../common/rowMaterial';
 
 interface CommentData {
   id: number;
@@ -9,10 +10,21 @@ interface CommentData {
   reply: CommentData[];
   date:string;
 }
+const initalComment :CommentData = {
+  id:1,
+  name:"john",
+  comment:"nice video",
+  reply:[],
+  date: new Date().toLocaleString()
 
+}
 const CommentSection: React.FC = () => {
-  const [comments, setComments] = useState<CommentData[]>([]);
+  const [comments, setComments] = useState<CommentData[]>([initalComment]);
   const [isAddReply, setIsAddReply] = useState<boolean>(false);
+
+  const handleCloseModal = () => {
+    setIsAddReply(false);
+  };
 
   const handleAddCommentMain = (id: number, newComment: CommentData) => {
     const toGetComment = comments.filter((curr) => curr.id === id);
@@ -25,7 +37,7 @@ const CommentSection: React.FC = () => {
     setComments(updatedState);
   };
 
-  const handleAddReplyMain = (obj:CommentName) => {
+  const handleAddReplyMain = (obj:initialForm) => {
     const newComment: CommentData = {
       id: Math.random() * 100,
       name: obj.name,
@@ -43,7 +55,12 @@ const CommentSection: React.FC = () => {
     <>
       <h3>{comments.length>0 && comments.length } Comments</h3>  
        <button onClick={() => setIsAddReply(!isAddReply)}>Add Comment</button>
-        { isAddReply &&  <CommentForm handleAddReplyMain={handleAddReplyMain} /> }
+        { isAddReply &&   <Modal
+           isOpen={isAddReply}
+           onClose={handleCloseModal}
+           handleAddReplyMain={handleAddReplyMain}
+          />
+        }
         {
            comments?.length > 0 && comments?.map((currComment) => (
             <SingleCommentBox key={currComment.id} {...currComment} handleAddCommentMain={handleAddCommentMain} />

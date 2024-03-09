@@ -1,42 +1,40 @@
+// Modal.js
 import React, { useState } from 'react';
+import { initialForm } from '../common/rowMaterial';
 import  style from './component.module.css';
 
-export interface CommentName {
-  name: string;
-  comment: string;
+
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  handleAddReplyMain: (formData: initialForm) => void;
 }
+const Modal: React.FC<ModalProps>  = ({ isOpen, onClose, handleAddReplyMain }) => {
+  const [formData, setFormData] = useState<initialForm>({ name: '', comment: '' });
 
-interface Props { handleAddReplyMain: ( newComment: CommentName) => void; }
-const initial ={ name:"", comment: '' }
-
-const CommentForm: React.FC<Props> = ({ handleAddReplyMain}) => {
-  const [formData, setFormData] = useState<CommentName>(initial);
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     handleAddReplyMain(formData);
-    setFormData(initial);
-  };
+    onClose();
+  }; 
 
   return (
-    <form onSubmit={handleSubmit} className={style.inptForm}>
-      <input
-        type='text'
-        placeholder='enter name'
-        value={formData?.name || ''}
-        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        required
-      />
-      <input
-        type='text'
-        placeholder='enter message'
-        value={formData?.comment || ''}
-        onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-        required
-      />
-      <input type='submit' value="Submit"/>
-    </form>
+     <div className={`${style.modal} ${isOpen ? style.open : ''}`}>
+      
+      <div className={style.modalContent}>
+         <h3>ADD Comment</h3>
+        <button className={style.close} onClick={()=>onClose()}>close</button>
+
+        <form onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required />
+          <label>Comment:</label>
+          <textarea value={formData.comment} onChange={(e) => setFormData({...formData, comment: e.target.value})} required/>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
   );
 };
 
-export default CommentForm;
+export default Modal;
