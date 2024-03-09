@@ -30,20 +30,20 @@ The application is deployed on Netlify and can be accessed [here](https://hyperg
 
 # Home Page 
 
-![Screenshot (223)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/d6a4d312-6df3-4932-a425-e7588bd2e6ad)
+
+![Screenshot (235)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/3ea6aa77-1711-451f-bba1-11ef226fa132)
+
 
 # Home page with playing video
 
-![Screenshot (233)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/391be335-5636-43e9-ab44-7dc555c0ba08)
 
+
+![Screenshot (237)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/b2d153db-8643-443b-9a97-9311f1d26f09)
 
 # Comment Section and Likes and dislikes ( Nested Comment )
 
-![Screenshot (227)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/159c8a6d-7584-4886-afb4-2c9e2fb625a5)
 
-
-
-
+![Screenshot (236)](https://github.com/JahirPendhari09/Video-Clone/assets/128920395/ae3a6efb-7181-4dec-95c7-a2ed7a8c9c27)
 
  # How to Run <br/>
    <h2>Installation</h2>
